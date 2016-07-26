@@ -12,7 +12,7 @@ apt-get install linux-headers-$(uname -r) -y
 
 # Installing required packages
 
-apt-get zip unzip dwarfdump -y
+apt-get install zip unzip dwarfdump -y
 
 # Downloading and extracting volatility framework 2.5
 
