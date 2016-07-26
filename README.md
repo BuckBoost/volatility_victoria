@@ -1,5 +1,7 @@
 # Creating Volatility Profile for 'victoria-v8-memdump.img'
 
+# wget --no-check-certificate https://raw.githubusercontent.com/BuckBoost/volatility_victoria/master/profile.sh
+
 Image given for analysis - victoria-v8.memdump.img
 
 Step 1:
@@ -52,7 +54,7 @@ Lets first install zip and unzip tool. Though we can do using tar command.
 
 apt-get install zip unzip -y
 
-wget https://github.com/volatilityfoundation/volatility/archive/master.zip -O volatility.zip ; unzip volatility.zip -d / ; mv /volatility-master /volatility; cd /volatility ; ls -l
+wget --no-check-certificate https://github.com/volatilityfoundation/volatility/archive/master.zip -O volatility.zip ; unzip volatility.zip -d / ; mv /volatility-master /volatility; cd /volatility ; ls -l
 
 Step 4:
 
