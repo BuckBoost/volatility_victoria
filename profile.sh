@@ -12,7 +12,7 @@ apt-get install linux-headers-$(uname -r) -y
 
 # Installing required packages
 
-apt-get install zip unzip dwarfdump -y
+apt-get install zip unzip dwarfdump make -y
 
 # Downloading and extracting volatility framework 2.5
 
@@ -25,6 +25,6 @@ make
 
 # Creating profile for Debian kernel 2.6.26-2-686
 
-zip /volatility/plugins/overlays/linux/Debian5_26.zip /volatility/tools/linux/module.dwarf /boot/System.map-2.6.26-2-686
+zip /volatility/volatility/plugins/overlays/linux/Debian5_26.zip /volatility/tools/linux/module.dwarf /boot/System.map-2.6.26-2-686
 
 
