@@ -12,7 +12,7 @@ apt-get install linux-headers-$(uname -r) -y
 
 # Installing required packages
 
-apt-get install zip unzip dwarfdump make -y
+apt-get install zip unzip dwarfdump make python -y
 
 # Downloading and extracting volatility framework 2.5
 
@@ -27,15 +27,17 @@ make
 
 zip /volatility/volatility/plugins/overlays/linux/Debian5_26.zip /volatility/tools/linux/module.dwarf /boot/System.map-2.6.26-2-686
 
-clear
-
 cd /volatility/volatility/plugins/overlays/linux/
+
+mkdir /profiles
+cp Debian5_26.zip /profiles
+cd /profiles
+
+clear
 
 ls -al | grep Debian5_26.zip
 
-pwd
 
-echo "use 'nc' tool to transfer the profile"
 echo "Enjoy!"
 echo  "____                   _      ____                          _   "
 echo  "|  _ \                 | |    |  _ \                        | |  "
@@ -44,5 +46,9 @@ echo  "|  _ <  | | | |  / __| | |/ / |  _ <   / _ \   / _ \  / __| | __|"
 echo  "| |_) | | |_| | | (__  |   <  | |_) | | (_) | | (_) | \__ \ | |_ "
 echo  "|____/   \__,_|  \___| |_|\_\ |____/   \___/   \___/  |___/  \__|"
                                                                   
-                                                               
+echo ""
+echo ""
+
+echo The file Debian5_26.zip is available at $(/sbin/ifconfig eth0 | grep 'inet addr' | cut -d: -f2 | awk '{print $1}'):8000
+python-m SimpleHTTPServer                         
                                                                  
