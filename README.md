@@ -1,6 +1,8 @@
 # Creating Volatility Profile for 'victoria-v8-memdump.img'
 
-# wget --no-check-certificate https://raw.githubusercontent.com/BuckBoost/volatility_victoria/master/profile.sh
+Here is the shell script for executing all the task mentioned below.
+
+"wget --no-check-certificate https://raw.githubusercontent.com/BuckBoost/volatility_victoria/master/profile.sh"
 
 Image given for analysis - victoria-v8.memdump.img
 
@@ -54,13 +56,13 @@ Lets first install zip and unzip tool. Though we can do using tar command.
 
 apt-get install zip unzip -y
 
-wget --no-check-certificate https://github.com/volatilityfoundation/volatility/archive/master.zip -O volatility.zip ; unzip volatility.zip -d / ; mv /volatility-master /volatility; cd /volatility ; ls -l
+wget --no-check-certificate https://github.com/volatilityfoundation/volatility/archive/master.zip -O /volatility.zip ; unzip /volatility.zip -d / ; mv /volatility-master /volatility
 
-Step 4:
+Step 4: (not necessary if you are not analysing the file in Debain 5 Lenny) 
 
-Now we need to install Python 2.5 or later verson as the volatility framework 2.5 requires it. 
+Now we need to install Python 2.5 or later verson as the volatility framework 2.5 requires it for its analysis.
 
-First we need to install some prerequisite packages
+First we need to install some prerequisite packages.
 
 apt-get install build-essential libsqlite3-dev zlib1g-dev libncurses5-dev libgdbm-dev libbz2-dev libreadline5-dev libssl-dev libdb-dev -y
 
@@ -83,20 +85,27 @@ Now lets get into the making volatility linux profile.
 
 Install dwarfdump package  
 
-apt-get install dwarfdump -y
+apt-get install dwarfdump make -y
 
 Switch the working directory to volatility/tools/linux
 run the 'make' command and if executed successfully, you will see a module.dwarf file created.
 
 We need to zip this file along with a critical file associated with our Debian distribution kernel called 'System.map'. In our case its 'System.map-2.6.26-2-686'
 
-zip /volatility/plugins/overlays/linux/Debian5_26.zip /volatility/tools/linux/module.dwarf /boot/System.map-2.6.26-2-686
+zip /volatility/volatility/plugins/overlays/linux/Debian5_26.zip /volatility/tools/linux/module.dwarf /boot/System.map-2.6.26-2-686
 
 Now from on, we can carry around our 'Debian5_26.zip' file and copy it to '/volatility/plugins/overlay/linux' directory to analyse our 'victoria-v8.memdump.img' file from a different kernel machine. 
 
 And hence the volatility profile is created.
 
-
+  ____                   _      ____                          _   
+ |  _ \                 | |    |  _ \                        | |  
+ | |_) |  _   _    ___  | | __ | |_) |   ___     ___    ___  | |_ 
+ |  _ <  | | | |  / __| | |/ / |  _ <   / _ \   / _ \  / __| | __|
+ | |_) | | |_| | | (__  |   <  | |_) | | (_) | | (_) | \__ \ | |_ 
+ |____/   \__,_|  \___| |_|\_\ |____/   \___/   \___/  |___/  \__|
+                                                                  
+                                                                  
  
 
  
