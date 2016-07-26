@@ -35,10 +35,8 @@ cd /profiles
 
 clear
 
-ls -al | grep Debian5_26.zip
 
 
-echo "Enjoy!"
 echo  "____                   _      ____                          _   "
 echo  "|  _ \                 | |    |  _ \                        | |  "
 echo  "| |_) |  _   _    ___  | | __ | |_) |   ___     ___    ___  | |_ "
@@ -50,5 +48,8 @@ echo ""
 echo ""
 
 echo The file Debian5_26.zip is available at $(/sbin/ifconfig eth0 | grep 'inet addr' | cut -d: -f2 | awk '{print $1}'):8000
-python-m SimpleHTTPServer                         
+
+echo ""
+echo ""
+python -m SimpleHTTPServer                         
                                                                  
