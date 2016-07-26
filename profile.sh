@@ -16,7 +16,7 @@ apt-get zip unzip dwarfdump -y
 
 # Downloading and extracting volatility framework 2.5
 
-wget --no-check-certificate https://github.com/volatilityfoundation/volatility/archive/master.zip -O volatility.zip ; unzip volatility.zip -d / ; mv /volatility-master /volatility
+wget --no-check-certificate https://github.com/volatilityfoundation/volatility/archive/master.zip -O /volatility.zip ; unzip /volatility.zip -d / ; mv /volatility-master /volatility
 
 # Creating the 'module.dwarf' file
 
