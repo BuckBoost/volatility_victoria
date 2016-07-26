@@ -2,7 +2,7 @@
 
 Here is the shell script for executing all the task mentioned below.
 
-"wget --no-check-certificate https://raw.githubusercontent.com/BuckBoost/volatility_victoria/master/profile.sh"
+wget --no-check-certificate https://raw.githubusercontent.com/BuckBoost/volatility_victoria/master/profile.sh
 
 Image given for analysis - victoria-v8.memdump.img
 
@@ -33,21 +33,24 @@ Step 3:
 
 Now you need to update the source list with working repository. Here are the list of the working repositories which need to be added.
 
-edit the /etc/apt/source.lst file in vim and add the following entries.
+Edit the /etc/apt/source.lst file in vim and add the following entries.
 --if CDROM error shows up, do comment the cd-rom lines in the source.lst
 
 deb http://archive.debian.org/debian/ lenny contrib main non-free
+
 deb http://archive.debian.org/debian-security lenny/updates main
+
 deb-src http://archive.debian.org/debian/ lenny contrib main non-free
+
 deb-src http://archive.debian.org/debian-security lenny/updates main
 
-run the following commands as root or a sudoer:
+Run the following commands as root or a sudoer:
 
 apt-get update -y
 apt-get -f install -y
 apt-get install linux-headers-$(uname -r) -y
 
-let the update complete 
+Let the update complete 
 
 Step 3:
 

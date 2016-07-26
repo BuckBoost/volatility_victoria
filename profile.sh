@@ -27,6 +27,8 @@ make
 
 zip /volatility/volatility/plugins/overlays/linux/Debian5_26.zip /volatility/tools/linux/module.dwarf /boot/System.map-2.6.26-2-686
 
+clear
+
 cd /volatility/volatility/plugins/overlays/linux/
 
 ls -al | grep Debian5_26.zip
