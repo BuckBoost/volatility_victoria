@@ -27,4 +27,20 @@ make
 
 zip /volatility/volatility/plugins/overlays/linux/Debian5_26.zip /volatility/tools/linux/module.dwarf /boot/System.map-2.6.26-2-686
 
+cd /volatility/volatility/plugins/overlays/linux/
 
+ls -al | grep Debian5_26.zip
+
+pwd
+
+echo "use 'nc' tool to transfer the profile"
+echo "Enjoy!"
+echo  "____                   _      ____                          _   "
+echo  "|  _ \                 | |    |  _ \                        | |  "
+echo  "| |_) |  _   _    ___  | | __ | |_) |   ___     ___    ___  | |_ "
+echo  "|  _ <  | | | |  / __| | |/ / |  _ <   / _ \   / _ \  / __| | __|"
+echo  "| |_) | | |_| | | (__  |   <  | |_) | | (_) | | (_) | \__ \ | |_ "
+echo  "|____/   \__,_|  \___| |_|\_\ |____/   \___/   \___/  |___/  \__|"
+                                                                  
+                                                               
+                                                                 
