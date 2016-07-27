@@ -12,7 +12,7 @@ Download the victoria-v8.memdump.img
 
 wget http://www.honeynet.org/challenge2011/downloads/victoria-v8.memdump.img.zip
 
-Find out the kernel information buy using the 'strings' command
+Find out the kernel information by using the 'strings' command
 
 strings victoria-v8.memdump.img | grep vmlinuz
 
@@ -33,8 +33,8 @@ Step 3:
 
 Now you need to update the source list with working repository. Here are the list of the working repositories which need to be added.
 
-Edit the /etc/apt/source.lst file in vim and add the following entries.
---if CDROM error shows up, do comment the cd-rom lines in the source.lst
+Edit the /etc/apt/sources.list file in vim and add the following entries.
+--if CDROM error shows up, do comment the cd-rom lines in the sources.list
 
 deb http://archive.debian.org/debian/ lenny contrib main non-free
 
@@ -47,8 +47,11 @@ deb-src http://archive.debian.org/debian-security lenny/updates main
 Run the following commands as root or a sudoer:
 
 apt-get update -y
+
 apt-get -f install -y
+
 apt-get install linux-headers-$(uname -r) -y
+
 
 Let the update complete 
 
