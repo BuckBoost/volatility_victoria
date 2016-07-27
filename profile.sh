@@ -47,7 +47,7 @@ echo  "|____/   \__,_|  \___| |_|\_\ |____/   \___/   \___/  |___/  \__|"
 echo ""
 echo ""
 
-echo The file Debian5_26.zip is available at $(/sbin/ifconfig eth0 | grep 'inet addr' | cut -d: -f2 | awk '{print $1}'):8000
+echo The file Debian5_26.zip is available at http://$(/sbin/ifconfig eth0 | grep 'inet addr' | cut -d: -f2 | awk '{print $1}'):8000
 
 echo ""
 echo ""
